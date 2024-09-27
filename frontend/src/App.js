@@ -13,15 +13,15 @@ function App() {
     getAllToDo(setToDo);
   }, []);
 
-  // useEffect(() => {
-  //   if (toDo.length === 0) {
-  //     const timer = setTimeout(() => {
-  //       window.location.reload();
-  //     }, 6000);
+   useEffect(() => {
+    if (toDo.length === 0) {
+       const timer = setTimeout(() => {
+         window.location.reload();
+      }, 8000);
 
-  //     return () => clearTimeout(timer);
-  //   }
-  // }, [toDo]);
+       return () => clearTimeout(timer);
+    }
+ }, [toDo]);
 
   const updateMode = (_id, text) => {
     setIsUpdating(true);
