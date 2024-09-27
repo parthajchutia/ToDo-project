@@ -17,7 +17,7 @@ function App() {
     if (toDo.length === 0) {
       const timer = setTimeout(() => {
         window.location.reload();
-      }, 5000);
+      }, 2000);
 
       return () => clearTimeout(timer);
     }
